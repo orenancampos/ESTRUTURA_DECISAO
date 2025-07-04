@@ -1,0 +1,25 @@
+<script>
+    /*
+    //PROBLEMA: TROCAR VARIÁVEIS
+    Faça um script que pede dois inteiros e armazene eles em duas variáveis.
+    Em seguida, troque o valor das variáveis, invertendo e exibindo o antes e o depois em uma janela de alert.
+    */
+
+    //ENTRADA
+
+    let valorI = Number(prompt("Digite o primeiro valor inteiro:"));
+
+    let valorII = Number(prompt("Digite o segundo valor inteiro:"));
+    
+    //PROCESSAMENTO
+
+    const armazenar = valorII;
+
+    valorII = valorI;
+
+    valorII = armazenar;
+
+    //SAÍDA
+    
+    document.write(`Os valores foram invertidos: agora são ${valorI} e ${valorII}`);
+</script>
