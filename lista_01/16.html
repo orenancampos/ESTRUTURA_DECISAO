@@ -1,0 +1,22 @@
+<meta charset="UTF-8" />
+<script>
+/*
+PROBLEMA: ANO BISSEXTO
+Recebe um ano e informa se ele é bissexto ou não.
+*/
+
+// ENTRADA
+const anoRecebido = Number(prompt("Informe um ano:"));
+
+// PROCESSAMENTO
+let statusAno = "";
+
+if ((anoRecebido % 4 === 0 && anoRecebido % 100 !== 0) || (anoRecebido % 400 === 0)) {
+    statusAno = "ano bissexto";
+} else {
+    statusAno = "ano normal";
+}
+
+// SAÍDA
+document.write(`O ano ${anoRecebido} é um ${statusAno}.`);
+</script>

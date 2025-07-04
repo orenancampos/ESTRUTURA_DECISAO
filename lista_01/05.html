@@ -1,0 +1,20 @@
+<script>
+    /*
+    PROBLEMA: VALIDA PAR OU ÍMPAR
+    Faça um script que peça um número inteiro e determine se ele é par ou ímpar.
+    */
+
+    //ENTRADA
+    const valor = Number(prompt("Digite um número inteiro:"));
+
+    //PROCESSAMENTO
+    let tipo;
+    if (valor % 2 === 0) {
+        tipo = "par";
+    } else {
+        tipo = "ímpar";
+    }
+
+    //SAÍDA
+    document.write(`O número ${valor} é ${tipo}.`);
+</script>

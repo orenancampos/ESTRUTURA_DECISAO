@@ -1,0 +1,57 @@
+<script>
+    /*
+    PROBLEMA: OPERAÇÃO MATEMÁTICA
+    Faça um script que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
+    - par ou ímpar;
+    - positivo ou negativo;
+    - inteiro ou decimal.
+    */
+
+    //ENTRADA
+    const primeiroNumero = Number(prompt("Digite o primeiro número:"));
+    const segundoNumero = Number(prompt("Digite o segundo número:"));
+    const operacaoEscolhida = prompt("Digite a operação que deseja fazer: +, -, * (multiplicação), / (divisão)");
+
+    //PROCESSAMENTO
+    let resultadoOperacao = 0;
+    let paridade = "";
+    let sinalNumero = "";
+    let tipoNumero = "";
+
+    if (operacaoEscolhida === "+") {
+        resultadoOperacao = primeiroNumero + segundoNumero;
+    } else if (operacaoEscolhida === "-") {
+        resultadoOperacao = primeiroNumero - segundoNumero;
+    } else if (operacaoEscolhida === "*") {
+        resultadoOperacao = primeiroNumero * segundoNumero;
+    } else if (operacaoEscolhida === "/") {
+        resultadoOperacao = primeiroNumero / segundoNumero;
+    } else {
+        alert("Operação inválida");
+    }
+
+    if (resultadoOperacao % 2 === 0) {
+        paridade = "número par";
+    } else {
+        paridade = "número ímpar";
+    }
+
+    if (resultadoOperacao > 0) {
+        sinalNumero = "número positivo";
+    } else if (resultadoOperacao < 0) {
+        sinalNumero = "número negativo";
+    } else {
+        sinalNumero = "número neutro (0)";
+    }
+
+    if (resultadoOperacao === 0) {
+        tipoNumero = "número neutro (0)";
+    } else if (Math.floor(resultadoOperacao) === resultadoOperacao) {
+        tipoNumero = "número inteiro";
+    } else {
+        tipoNumero = "número decimal";
+    }
+
+    //SAÍDA
+    alert(`O resultado é ${resultadoOperacao}, ele é um ${paridade}, ${sinalNumero} e um ${tipoNumero}.`);
+</script>

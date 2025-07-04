@@ -1,0 +1,34 @@
+<meta charset="UTF-8" />
+<script>
+/*
+PROBLEMA: AUMENTO DE PREÇO
+Recebe o preço do produto e calcula o aumento do preço, baseado no seguinte critério:
+- até 280(inclusive): aumento de 20 %
+- até 700(inclusive): aumento de 15 %
+- até 1500(inclusive): aumento de 10 %
+- acima de 1500: aumento de 5 %
+*/
+
+// ENTRADA
+const valorProduto = Number(prompt("Insira o valor do produto:"));
+
+// PROCESSAMENTO
+let percentual = 0;
+if (valorProduto <= 280) {
+    percentual = 0.20;
+} else if (valorProduto <= 700) {
+    percentual = 0.15;
+} else if (valorProduto <= 1500) {
+    percentual = 0.10;
+} else {
+    percentual = 0.05;
+}
+const aumento = valorProduto * percentual;
+const novoValor = valorProduto + aumento;
+
+// SAÍDA
+document.write(`O valor antigo era R$${valorProduto}. `);
+document.write(`O aumento foi de ${percentual * 100}%. `);
+document.write(`O valor do aumento é R$${aumento}. `);
+document.write(`O novo valor é R$${novoValor}.`);
+</script>
