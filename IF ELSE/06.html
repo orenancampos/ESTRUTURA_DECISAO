@@ -1,4 +1,4 @@
-<script>   
+<script>
     /*
     PROBLEMA: NÚMERO DE CENTENAS, DEZENAS E UNIDADES
     Faça um script que leia um número inteiro menor que 1000 e imprima a quantidade de centenas, dezenas e unidades do mesmo.
@@ -13,13 +13,12 @@
 
     if (numero < 0 || numero >= 1000 || isNaN(numero)) {
         document.write("Número inválido. Por favor, informe um inteiro menor que 1000.");
-    } else { 
+    } else {
         // PROCESSAMENTO
         const centenas = Math.floor(numero / 100);
         const dezenas = Math.floor((numero % 100) / 10);
         const unidades = numero % 10;
 
-        // Monta as partes do texto
         const partes = [];
 
         if (centenas > 0) {
@@ -32,7 +31,6 @@
             partes.push(unidades + " " + (unidades === 1 ? "unidade" : "unidades"));
         }
 
-        // Formata a saída com vírgulas e "e"
         let resultado = "";
         if (partes.length === 1) {
             resultado = partes[0];
